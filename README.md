@@ -13,7 +13,7 @@ For experienced Python users, you may use the cmd, but make sure that you have [
 
 ## Installation of ceviche
 
-[Ceviche](https://github.com/fancompute/ceviche) is a finite difference frequency domain (FDFD) and time domain (FDTD) package for solving Maxwell's equations. It was developed by Tyler W Hughes, Ian AD Williamson and Momchil Minkov in [Shanhui Fan's group](https://web.stanford.edu/group/fan/) at Stanford University. We will use ceviche as the primary tool to simulate and optimize optical devices.
+**[Ceviche](https://github.com/fancompute/ceviche)** is a finite difference frequency domain (FDFD) and time domain (FDTD) package for solving Maxwell's equations. It was developed by Tyler W Hughes, Ian AD Williamson and Momchil Minkov in [Shanhui Fan's group](https://web.stanford.edu/group/fan/) at Stanford University. We will use ceviche as the primary tool to simulate and optimize optical devices.
 
 The source code of ceviche is freely available on GitHub and there are multiple ways to install it on your computer. I recommend to download it as a zip archive by visiting [https://github.com/fancompute/ceviche](https://github.com/fancompute/ceviche), clicking on the green "Clone or download" button in the top right corner of the GitHub repository page and then selecting "Download ZIP" from the drop down menu. After that, you can extract the files and save them in a new folder, e.g., called "InverseDesign".
 
