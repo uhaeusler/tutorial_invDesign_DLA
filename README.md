@@ -64,9 +64,11 @@ If you are not using Anaconda, you might need to install some more packages, whi
 
 This repository comes along with a [Jupyter](https://jupyter.org/) notebook (`.ipynb` file format). You can open, edit and run this file with the program Jupyter Notebook, which you will already have installed if you choose Anaconda. Jupyter Notebook and its follow-up program JupyterLab are web-based user interfaces that run from your local computing environment. You may open them by running the command `jupyter notebook` or `jupyter lab` in your Anaconda Prompt or cmd. Redirect to the appropriate folder and open the file. In order to run the notebook cell-by-cell, you may use "Shift+Enter".
 
-A Jupyter notebook consists of cells, which allows you to include not only code, but also text and plots. This comes in handy when you want to present your code. For pure programming, you may prefer a traditional IDE, such as Spyder, where you run the code top-to-bottom.
+A Jupyter notebook consists of cells, which allows you to include not only code, but also text and plots. This comes in handy when you want to present your code. For pure programming, you may prefer a traditional IDE, such as [Spyder](https://www.spyder-ide.org/), where you run the code top-to-bottom.
 
 ## Working with Spyder
+
+[Spyder](https://www.spyder-ide.org/) is an integrated development environment that comprises a text editor, a console, variable explorer and a debugger. Simply open Spyder, select a Python file (`.py` file format) and run the script by pressing the green play buttom or F5.
 
 ## Further reading
 
