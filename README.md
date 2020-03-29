@@ -13,25 +13,25 @@ For experienced Python users, you may use the cmd, but make sure that you have [
 
 ## Installation of ceviche
 
-**[Ceviche](https://github.com/fancompute/ceviche)** is a finite difference frequency domain (FDFD) and time domain (FDTD) package for solving Maxwell's equations. It was developed by Tyler W Hughes, Ian AD Williamson and Momchil Minkov in [Shanhui Fan's group](https://web.stanford.edu/group/fan/) at Stanford University. We will use ceviche as the primary tool to simulate and optimize optical devices.
+**[Ceviche](https://github.com/fancompute/ceviche)** is a finite difference frequency domain (FDFD) and time domain (FDTD) package for solving Maxwell's equations. It was developed by Tyler W Hughes, Ian AD Williamson and Momchil Minkov in [Shanhui Fan's group](https://web.stanford.edu/group/fan/) at Stanford University. We will use `ceviche` as the primary tool to simulate and optimize optical devices.
 
-The source code of ceviche is freely available on GitHub and there are multiple ways to install it on your computer. I recommend to download it as a zip archive by visiting [https://github.com/fancompute/ceviche](https://github.com/fancompute/ceviche), clicking on the green "Clone or download" button in the top right corner of the GitHub repository page and then selecting "Download ZIP" from the drop down menu. After that, you can extract the files and save them in a new folder, e.g., called "InverseDesign".
+The source code of `ceviche` is freely available on GitHub and there are multiple ways to install it on your computer. I recommend to download it as a zip archive by visiting [https://github.com/fancompute/ceviche](https://github.com/fancompute/ceviche), clicking on the green "Clone or download" button in the top right corner of the GitHub repository page and then selecting "Download ZIP" from the drop down menu. After that, you can extract the files and save them in a new folder, e.g., called "InverseDesign".
 
-In order to use the material of this [tutorial](https://github.com/uhaeusler/workshop_inverseDesign_DLA), you can proceed likewise and save it in the same folder as above. Now the folder "InverseDesign" should contain a folder "ceviche-master" and a folder "tutorial_invDesign_DLA-master".
+In order to use the material of this [tutorial](https://github.com/uhaeusler/tutorial_invDesign_DLA), you can proceed likewise and save it in the same folder as above. Now the folder "InverseDesign" should contain a folder "ceviche-master" and a folder "tutorial_invDesign_DLA-master".
 
 Alternatively, if you have `git` installed, you can enter the following command in a terminal to clone the repositories:
 
     git clone https://github.com/fancompute/ceviche.git
     git clone https://github.com/uhaeusler/tutorial_invDesign_DLA.git
 
-Whenever you want to use a package within your Python script, you will have to import it. Before we can do this with the ceviche package, we need to add it to the system path, which is done by
+Whenever you want to use a package within your Python script, you will have to import it. Before we can do this with the `ceviche` package, we need to add it to the system path, which is done by
 
 ```python
 import sys
 sys.path.append('path/to/ceviche-master')   # here: sys.path.append('../ceviche-master')
 ```
 
-There is a another way of accessing ceviche, which is by actually "installing" it. For this, we open Anaconda Prompt (or cmd if you are not using conda) and type
+There is a another way of accessing `ceviche`, which is by actually "installing" it. For this, we open Anaconda Prompt (or cmd if you are not using conda) and type
 
     pip install ceviche
 
@@ -39,7 +39,7 @@ Finally, there is a bunch of packages that we need to install before we can run 
 
 **[HIPS autograd](https://github.com/HIPS/autograd)** is an automatic differentiation framework with a [Numpy](https://numpy.org/)-like API, which we use for the inverse design optimization algorithm.
 
-**[pyMKL](https://pypi.org/project/pyMKL/)** provides an interface to the [PARDISO](https://www.pardiso-project.org/) sparse solver, which can fasten up our simulations compared to the standard SciPy sparse linear solver routines.
+**[pyMKL](https://pypi.org/project/pyMKL/)** provides an interface to the [PARDISO](https://www.pardiso-project.org/) sparse solver, which can speed up our simulations compared to the standard SciPy sparse linear solver routines.
 
 **[scikit-image](https://scikit-image.org/)** offers useful functions for drawing shapes into 2D arrays, which we apply to define geometrical features on our photonic device.
 
