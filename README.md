@@ -17,12 +17,12 @@ For experienced Python users, you may use the cmd, but make sure that you have [
 
 The source code of ceviche is freely available on GitHub and there are multiple ways to install it on your computer. I recommend to download it as a zip archive by visiting [https://github.com/fancompute/ceviche](https://github.com/fancompute/ceviche), clicking on the green "Clone or download" button in the top right corner of the GitHub repository page and then selecting "Download ZIP" from the drop down menu. After that, you can extract the files and save them in a new folder, e.g., called "InverseDesign".
 
-In order to use the material of this [tutorial](https://github.com/uhaeusler/workshop_inverseDesign_DLA), you can proceed likewise and save it in the same folder as above. Now the folder "InverseDesign" should contain a folder "ceviche-master" and a folder "workshop_inverseDesign_DLA-master".
+In order to use the material of this [tutorial](https://github.com/uhaeusler/workshop_inverseDesign_DLA), you can proceed likewise and save it in the same folder as above. Now the folder "InverseDesign" should contain a folder "ceviche-master" and a folder "tutorial_invDesign_DLA-master".
 
 Alternatively, if you have `git` installed, you can enter the following command in a terminal to clone the repositories:
 
     git clone https://github.com/fancompute/ceviche.git
-    git clone https://github.com/uhaeusler/workshop_inverseDesign_DLA.git
+    git clone https://github.com/uhaeusler/tutorial_invDesign_DLA.git
 
 Whenever you want to use a package within your Python script, you will have to import it. Before we can do this with the ceviche package, we need to add it to the system path, which is done by
 
@@ -62,9 +62,9 @@ If you are not using Anaconda, you might need to install some more packages, whi
 
 ## Running a Jupyter notebook
 
-This repository comes along with two [Jupyter](https://jupyter.org/) notebooks (`.ipynb` file format). You can open, edit and run these files with the program Jupyter Notebook, which you have already installed if you choose Anaconda. Jupyter Notebook and its follow-up program JupyterLab are web-based user interfaces that run from your local computing environment. You may open them by running the command `jupyter notebook` or `jupyter lab` in your Anaconda Prompt or cmd. Redirect to the appropriate folder and open the files. In order to run the notebook cell-by-cell, you may use "Shift+Enter".
+This repository comes along with a [Jupyter](https://jupyter.org/) notebook (`.ipynb` file format). You can open, edit and run this file with the program Jupyter Notebook, which you will already have installed if you choose Anaconda. Jupyter Notebook and its follow-up program JupyterLab are web-based user interfaces that run from your local computing environment. You may open them by running the command `jupyter notebook` or `jupyter lab` in your Anaconda Prompt or cmd. Redirect to the appropriate folder and open the file. In order to run the notebook cell-by-cell, you may use "Shift+Enter".
 
-Your Jupyter notebook consists of cells, which allows you to include not only code, but also text and plots. This comes in handy when you want to present your code. For pure programming, you may prefer a traditional IDE, such as Spyder, where you run the code top-to-bottom.
+A Jupyter notebook consists of cells, which allows you to include not only code, but also text and plots. This comes in handy when you want to present your code. For pure programming, you may prefer a traditional IDE, such as Spyder, where you run the code top-to-bottom.
 
 ## Working with Spyder
 
