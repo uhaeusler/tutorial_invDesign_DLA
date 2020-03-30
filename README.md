@@ -55,7 +55,7 @@ If you followed the instructions above, you are now ready to use ceviche. Let me
 
     pip install ceviche
 
-This command will automatically install some other Python packages (autograd, matplotlib, numpy, pyMKL, scipy), which are needed to run ceviche.
+This command will automatically install some of the above Python packages (autograd, matplotlib, numpy, pyMKL, scipy).
 
 ## Import ceviche
 
