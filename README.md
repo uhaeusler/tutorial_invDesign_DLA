@@ -51,7 +51,7 @@ If you are not using Anaconda, you might need to install some more packages, whi
 
 ### PIP INSTALL CEVICHE
 
-If you followed the instructions above, you are now ready to use ceviche. Let me point out that there is actually another way of accessing `ceviche`, which actually qualifies for the term "installation". For this, we open Anaconda Prompt (or cmd if you are not using conda) and type
+If you followed the instructions above, you are now ready to use ceviche. Let me point out that there is actually another way of accessing `ceviche`. This way actually qualifies for the term "installation" in a more narrow sense. For this, we open Anaconda Prompt (or cmd if you are not using conda) and type
 
     pip install ceviche
 
@@ -59,14 +59,14 @@ This command will automatically install some other Python packages (autograd, ma
 
 ## Import ceviche
 
-Whenever you want to use a package in your Python script, you will have to import at. Before you can do this with `ceviche`, we need to add it to the system path, which is done by
+Whenever you want to use a package in your Python script, you will have to import it. Before you can do this with `ceviche`, we need to add it to the system path, which is done by
 
 ```python
 import sys
 sys.path.append('path/to/ceviche-master')   # here: sys.path.append('../ceviche-master')
 ```
 
-**Note:** If you actually installed ceviche with `pip install ceviche`, there are is no need for that and you may directly use `import ceviche` in your Python script.
+**Note:** If you actually installed ceviche with `pip install ceviche`, there is no need for that and you may directly use `import ceviche` in your Python script.
 
 ## Running a Jupyter notebook
 
