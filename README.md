@@ -24,17 +24,6 @@ Alternatively, if you have `git` installed, you can enter the following command 
     git clone https://github.com/fancompute/ceviche.git
     git clone https://github.com/uhaeusler/tutorial_invDesign_DLA.git
 
-Whenever you want to use a package within your Python script, you will have to import it. Before we can do this with the `ceviche` package, we need to add it to the system path, which is done by
-
-```python
-import sys
-sys.path.append('path/to/ceviche-master')   # here: sys.path.append('../ceviche-master')
-```
-
-There is a another way of accessing `ceviche`, which is by actually "installing" it. For this, we open Anaconda Prompt (or cmd if you are not using conda) and type
-
-    pip install ceviche
-
 Finally, there is a bunch of packages that we need to install before we can run all scripts of this repository.
 
 **[HIPS autograd](https://github.com/HIPS/autograd)** is an automatic differentiation framework with a [Numpy](https://numpy.org/)-like API, which we use for the inverse design optimization algorithm.
@@ -59,6 +48,25 @@ If you are not using Anaconda, you might need to install some more packages, whi
     pip install pymkl
     pip install scikit-image
     pip install scipy
+
+### PIP INSTALL CEVICHE
+
+If you followed the instructions above, you are now ready to use ceviche. Let me point out that there is actually another way of accessing `ceviche`, which actually qualifies for the term "installation". For this, we open Anaconda Prompt (or cmd if you are not using conda) and type
+
+    pip install ceviche
+
+This command will automatically install some other Python packages (autograd, matplotlib, numpy, pyMKL, scipy), which are needed to run ceviche.
+
+## Import ceviche
+
+Whenever you want to use a package in your Python script, you will have to import at. Before you can do this with `ceviche`, we need to add it to the system path, which is done by
+
+```python
+import sys
+sys.path.append('path/to/ceviche-master')   # here: sys.path.append('../ceviche-master')
+```
+
+**Note:** If you actually installed ceviche with `pip install ceviche`, there are is no need for that and you may directly use `import ceviche` in your Python script.
 
 ## Running a Jupyter notebook
 
