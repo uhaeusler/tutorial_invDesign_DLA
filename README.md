@@ -57,6 +57,12 @@ If you followed the instructions above, you are now ready to use ceviche. Let me
 
 This command will automatically install some of the above Python packages (autograd, matplotlib, numpy, pyMKL, scipy).
 
+### Install gdspy
+
+Installing `gdspy` on Windows is a bit of a pain because Microsoft Visual C++ 14.0 is required. This will come with Microsoft Visual Studio if you add the `Desktop development with C++` workload. The rest is pretty simple, just use
+
+    pip install gdspy
+
 ## Import ceviche
 
 Whenever you want to use a package in your Python script, you will have to import it. Before you can do this with `ceviche`, we need to add it to the system path, which is done by
