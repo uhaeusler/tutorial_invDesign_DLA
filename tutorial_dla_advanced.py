@@ -2,9 +2,10 @@ import numpy as np
 import autograd.numpy as npa
 from autograd.scipy.signal import convolve as conv
 
-import sys
+import sys, os
 sys.path.append('../ceviche-master')
 
+import ceviche
 from ceviche import fdfd_hz, jacobian
 from ceviche.optimizers import adam_optimize
 from ceviche.constants import C_0
@@ -13,8 +14,13 @@ import matplotlib.pylab as plt
 from skimage.draw import circle
 
 from mpl_toolkits.axes_grid1 import make_axes_locatable
+import gdspy as gy
+from skimage.measure import find_contours
 
 ''' Optimization of DLA structure using inverse design '''
+# Do you have any special requests?
+foldername = '.\optimization\\test_1' # to save the results
+Get_gds = True
 
 # Physical parameters
 wavelength = 2e-6                # wavelength of laser light (m)
@@ -113,3 +119,27 @@ im = plt.imshow(np.real(Ey.T*np.exp(1j*3)), cmap='RdBu', aspect='auto', vmin=-ma
 divider = make_axes_locatable(ax)
 cax = divider.append_axes('right', size='5%', pad=0.05)
 cbar = plt.colorbar(im, cax=cax, orientation='vertical');
+
+if Get_gds:
+    # create folder if needed
+    if not os.path.exists(foldername):
+        os.makedirs(foldername)
+    
+    # how many periods do you want to convert into a gds file
+    n_periods = 20
+    eps_new = np.concatenate((np.ones((Nx,2)), np.tile(eps_r, (1,n_periods)),
+                              np.ones((Nx,2))), axis=1)
+    
+    # make sure that the gds files are named uniquely
+    try:
+        gds_number = gds_number + 1
+    except NameError: gds_number = 0
+    cell = gy.Cell('eps'+str(gds_number))
+    
+    contour_level = 10  # pick a value between epsr_min and epsr_max
+    for points in find_contours(eps_new, contour_level):
+        cell.add(gy.Polygon(points).fracture())
+    
+    # write gds file
+    gy.write_gds(foldername+'\\gds_file.gds', [cell.name], unit=dL)
+    
